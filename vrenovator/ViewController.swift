@@ -71,6 +71,20 @@ class ViewController: UIViewController {
     
     // MARK: - Private methods
     
+    func makeSnapshotAndSaveToPhotos() {
+        let snapShot = self.sceneView.snapshot()
+        UIImageWriteToSavedPhotosAlbum(snapShot, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+
+        if let error = error {
+            print("Error Saving ARKit Scene \(error)")
+        } else {
+            print("ARKit Scene Successfully Saved")
+        }
+    }
+    
     func plane(in location: CGPoint) -> Plane? {
         
         guard let raycastQuery = sceneView.raycastQuery(from: location, allowing: .existingPlaneGeometry, alignment: .vertical),
@@ -149,7 +163,7 @@ extension ViewController: ARSCNViewDelegate {
         // Add nodes only if classified as .wall
         switch planeAnchor.classification {
             case .wall:
-                // Create a custom object to visualize the plane geometry and extent.
+                // Create a custom object to visualize the plane's extent.
                 let plane = Plane(anchor: planeAnchor, in: sceneView)
                             
                 // Add the visualization to the ARKit-managed node so that it tracks
@@ -222,5 +236,7 @@ extension ViewController: UIColorPickerViewControllerDelegate {
         guard let tappedPlane = self.tappedPlane else { return }
         
         tappedPlane.color = viewController.selectedColor
+        
+        makeSnapshotAndSaveToPhotos()
     }
 }
