@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		5EBD84BF259BCE7F00462176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD84BE259BCE7F00462176 /* AppDelegate.swift */; };
-		5EBD84C1259BCE7F00462176 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD84C0259BCE7F00462176 /* art.scnassets */; };
 		5EBD84C3259BCE7F00462176 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD84C2259BCE7F00462176 /* ViewController.swift */; };
 		5EBD84C6259BCE7F00462176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD84C4259BCE7F00462176 /* Main.storyboard */; };
 		5EBD84C8259BCE8000462176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD84C7259BCE8000462176 /* Assets.xcassets */; };
 		5EBD84CB259BCE8000462176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBD84C9259BCE8000462176 /* LaunchScreen.storyboard */; };
+		5EBD84D6259BD00800462176 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBD84D5259BD00800462176 /* Plane.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5EBD84BB259BCE7F00462176 /* vrenovator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vrenovator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBD84BE259BCE7F00462176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5EBD84C0259BCE7F00462176 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		5EBD84C2259BCE7F00462176 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5EBD84C5259BCE7F00462176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EBD84C7259BCE8000462176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EBD84CA259BCE8000462176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EBD84CC259BCE8000462176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EBD84D5259BD00800462176 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +56,8 @@
 		5EBD84BD259BCE7F00462176 /* vrenovator */ = {
 			isa = PBXGroup;
 			children = (
+				5EBD84D4259BCFE400462176 /* Model */,
 				5EBD84BE259BCE7F00462176 /* AppDelegate.swift */,
-				5EBD84C0259BCE7F00462176 /* art.scnassets */,
 				5EBD84C2259BCE7F00462176 /* ViewController.swift */,
 				5EBD84C4259BCE7F00462176 /* Main.storyboard */,
 				5EBD84C7259BCE8000462176 /* Assets.xcassets */,
@@ -65,6 +65,14 @@
 				5EBD84CC259BCE8000462176 /* Info.plist */,
 			);
 			path = vrenovator;
+			sourceTree = "<group>";
+		};
+		5EBD84D4259BCFE400462176 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EBD84D5259BD00800462176 /* Plane.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +132,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EBD84C1259BCE7F00462176 /* art.scnassets in Resources */,
 				5EBD84CB259BCE8000462176 /* LaunchScreen.storyboard in Resources */,
 				5EBD84C8259BCE8000462176 /* Assets.xcassets in Resources */,
 				5EBD84C6259BCE7F00462176 /* Main.storyboard in Resources */,
@@ -139,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EBD84C3259BCE7F00462176 /* ViewController.swift in Sources */,
+				5EBD84D6259BD00800462176 /* Plane.swift in Sources */,
 				5EBD84BF259BCE7F00462176 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UYU2T98W35;
 				INFOPLIST_FILE = vrenovator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UYU2T98W35;
 				INFOPLIST_FILE = vrenovator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
